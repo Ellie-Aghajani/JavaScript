@@ -1,2 +1,5 @@
-        //always share why and how
-        console.log('hellooooo')
+function square(number) {
+    return number * number;
+}
+let area = square(8);
+console.log(area);
