@@ -65,3 +65,15 @@ console.log(scores);
 //typeof array is object
 //can access its properties with dot notation
 console.log(scores.length);
+
+//funtions: a set of statements that perform a task or calculates a value
+function nameOfFunction(parameters){
+    //body of the function
+}
+//call the function
+nameOfFunction();
+
+function area (width, height){
+    console.log(width * height);
+} 
+area(5, 6);
