@@ -29,4 +29,4 @@ let age; //if you don't initialize it
 let favoriteFood = null //use null when you want to clear the value
 
 
-
+console.log(typeof year);
