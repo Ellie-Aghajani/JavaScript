@@ -15,3 +15,18 @@ console.log(firstName);
 //use const when you don't need to re-assign the value 
 const username = 'elimo'; 
 console.log(username);
+
+//value types:
+//string
+let name = 'Mostafa';
+//number
+let year = 1990;
+//boolean
+let isMarried = true;
+//undefined
+let age; //if you don't initialize it
+//null
+let favoriteFood = null //use null when you want to clear the value
+
+
+
