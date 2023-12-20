@@ -52,3 +52,16 @@ let person = {
   person['name'] = 'Mary';
   console.log(person.name);
 
+//use array to store a list
+//position of elements in array : index
+//index starts at 0
+let scores = [];
+scores[0] = 20;
+scores[1] = 18;
+scores[2] = 17;
+
+console.log(scores);
+
+//typeof array is object
+//can access its properties with dot notation
+console.log(scores.length);
