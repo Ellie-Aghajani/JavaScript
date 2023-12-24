@@ -1,14 +1,14 @@
 //Basic if...else structure:
-if (condition) {
-    statement
-}
-else if (anotherCondition) {
-    statement
-}
-else if (yetAnotherCondition){
-    statement
-}
-else statement
+// if (condition) {
+//     statement
+// }
+// else if (anotherCondition) {
+//     statement
+// }
+// else if (yetAnotherCondition){
+//     statement
+// }
+// else statement
 
 
 
@@ -19,12 +19,41 @@ else statement
 // Otherwise: Good night!
 
 function hour(time){
-    if (9< time <17){
+    if (9 <= time &&  time <= 17){
         return "Time to work!";
-    } else if (17< time< 22){
+    } else if (17 < time && time <= 22){
         return "Have fun!";
     }
-    return "Good night!"
+    return "Good night!";
 }
-let whatToDo = hour(20);
+let whatToDo = hour(17);
 console.log(whatToDo);
+
+//switch..case
+//switch(variable){
+    //case 'something to compare value of variable':
+    //statement
+    //break;
+//}
+
+let trafficLights = 'red' ;
+switch (trafficLights){
+    case 'red':
+        console.log( "stop!");
+        break;
+    case 'yellow':
+        console.log( "Slow down");
+        break;
+    case 'green':
+        console.log( "Pass!")
+        break;
+    default:
+        "invalid input";
+}
+
+if (trafficLights === 'red') {
+    return 'stop';
+}else if (trafficLights === 'yellow'){
+    return 'Slow down';
+}
+return 'pass';
