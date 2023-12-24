@@ -57,3 +57,18 @@ if (trafficLights === 'red') {
     return 'Slow down';
 }
 return 'pass';
+
+//loops
+//for 
+// for(initialExpression; condition; incrementExpression) {
+//     statment
+// }
+//example:
+
+for (let i = 0; i < 6; i++ ){
+    if( i % 2 !== 0) console.log('Hello');
+}
+//reverse order
+for (let i = 5; i >= 1; i-- ){
+    if (i % 2 !== 0) console.log(i);
+}
