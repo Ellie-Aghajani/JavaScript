@@ -103,7 +103,8 @@ do {
 for (let i = 0; i > 5 ;);
 
 
-//for...in
+//for...in 
+//best loop for objects
 const person = {
     name: 'Ellie',
     age: 33
