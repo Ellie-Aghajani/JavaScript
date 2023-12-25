@@ -86,3 +86,18 @@ do {
     if (1 % 2 !== 0) console.log(i) ;
     i++;
 } while (i <= 5);
+//infinite loop
+let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+while (true) {
+
+}
+
+let x = 0;
+do {
+ // x++;
+} while (x < 5);
+for (let i = 0; i > 5 ;);
