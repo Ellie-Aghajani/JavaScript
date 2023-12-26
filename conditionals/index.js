@@ -132,3 +132,10 @@ function maximum(num1, num2){
     //return (num1 > num2)? num1 : num2;
 }
 maximum(6,7);
+
+//is the picture landscape
+function isLandscape (width, height) {
+    return (width > height);
+    //return (width > height) ? true: false;
+
+}
