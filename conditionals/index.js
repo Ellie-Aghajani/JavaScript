@@ -155,3 +155,23 @@ function fizzBuzz (num) {
         return 'Buzz';
     return num;    
 }
+
+//exercise:
+// Speed Limit = 70
+// 5 -> 1 point
+// Math.floor (1.3)
+// 12 points -> suspended
+
+function checkSpeed(speed){
+    const speedLimit = 70;
+    const kmPerpoint = 5;
+    if (speed >= speedLimit + kmPerpoint){
+        let point = Math.floor((speed - speedLimit) / kmPerpoint);
+        if (point >= 12) return " license suspended ";
+        return 'point: '+ point;
+
+
+    }
+    return 'OK';
+}
+checkSpeed(20);
