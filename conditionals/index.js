@@ -139,3 +139,19 @@ function isLandscape (width, height) {
     //return (width > height) ? true: false;
 
 }
+
+//fizzbuzz: if input is devisible by 3 you get fizz, 
+//if input is devisible by 5 you get buzz,
+//if input is devisible by 3 and 5 you get fizzbuzz
+
+function fizzBuzz (num) {
+    if (typeof num !== 'number') 
+        return NaN;
+    if ((num % 3 === 0) && (num % 5 === 0)) 
+        return 'FizzBuzz';
+    if (num % 3 === 0) 
+        return 'Fizz';
+    if (num % 5 === 0) 
+        return 'Buzz';
+    return num;    
+}
