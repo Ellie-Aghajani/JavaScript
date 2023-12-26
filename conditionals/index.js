@@ -117,3 +117,17 @@ const colors = ['red', 'green', 'blue'];
 for (let index in colors){
     console.log(index, colors[index]);
 }
+
+//for ... of
+let animals = ['cat', 'dog', 'mouse'];
+for(let animal in animals){
+    console.log(animal);
+};
+//jump out of loop with break key word
+
+//Write a function that takes two numbers and returns the maximum of the two.
+function maximum(num1, num2){
+    if (num1 > num2) return num1;
+    return num2;
+}
+maximum(6,7);
