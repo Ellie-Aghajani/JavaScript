@@ -185,3 +185,14 @@ function showNumbers (limit) {
         console. log(i, message);
 }
 }
+//example
+let array = [0, NaN, false, 1, 2, 3];
+
+function countTuthy (array) {
+    let counter = 0;
+    for (let value of array)
+        if (value) 
+            counter++;
+    return counter;
+}
+countTuthy(array);
