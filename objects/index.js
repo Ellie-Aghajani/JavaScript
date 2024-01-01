@@ -102,3 +102,20 @@ const another2 = Object.assign({}, circle5);
 //spread operator
 
 const copy = { ...circle5 };
+
+//create address object with these properties:
+// street, city, zipCode
+//then create showAddress function to display all address properties with value
+
+const address = {
+    street: 'Bonaccord Drive',
+    city: 'Vancouver',
+    zipCode: 'V5P 2N9'
+};
+
+function showAddress(address){
+    for(let key in addres){
+        console.log(key, address[key]);
+    }
+}
+showAddress(address);
