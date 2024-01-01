@@ -12,4 +12,4 @@ const circle = {
     }
 }
 
-circle.draw();
+circle.draw(); //method
