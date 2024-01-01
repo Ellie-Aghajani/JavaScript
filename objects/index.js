@@ -47,3 +47,18 @@ console.log(circle);
 //which returns a new object, 
 //constructor functions: instead of returning object
 //use 'this' keyword
+
+//adding or deleting object properties
+const square = {
+    side: 1
+};
+
+square.color = 'red';
+square.draw = function(){
+    console.log('draw');
+};
+
+delete square.color;
+delete square.draw;
+
+console.log(square);
