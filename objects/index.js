@@ -63,3 +63,21 @@ delete square.draw;
 
 console.log(square);
 //can not re-assign an obj, but can add or remove properties
+
+//enumerating obj properties
+const circle4 = {
+    radius: 1,
+    draw() {
+    console. log ('draw');}
+}
+
+for (let key in circle4)
+console.log(key, circle4[key]);
+
+
+for (let key of Object.keys(circle4))
+console.log(key);
+
+
+for (let entry of Object.entries(circle4))
+console.log(entry);
