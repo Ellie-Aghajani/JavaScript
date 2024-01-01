@@ -98,3 +98,7 @@ console.log(another);
 
 //cleaner way
 const another2 = Object.assign({}, circle5);
+//the simplest way to clone an object
+//spread operator
+
+const copy = { ...circle5 };
