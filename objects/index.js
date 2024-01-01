@@ -102,7 +102,7 @@ const another2 = Object.assign({}, circle5);
 //spread operator
 
 const copy = { ...circle5 };
-
+//example 1
 //create address object with these properties:
 // street, city, zipCode
 //then create showAddress function to display all address properties with value
@@ -119,3 +119,25 @@ function showAddress(address){
     }
 }
 showAddress(address);
+//example 2
+//initialize an address object using factory function
+
+// Factory Function
+function createAddress(street, city, zipCode){
+    return{
+        street,
+        city,
+        zipCode
+    };
+}
+const address1 = createAddress('a', 'b', 'c');
+console.log(address1);
+
+//Constructor Function
+function CreateAddress(street, city, zipCode){
+    this.street = street,
+    this.city = city,
+    this.zipCode = zipCode
+}
+const address2 = new CreateAddress('a', 'b', 'c');
+console.log(address2);
