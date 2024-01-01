@@ -81,3 +81,17 @@ console.log(key);
 
 for (let entry of Object.entries(circle4))
 console.log(entry);
+
+//cloning of an object
+
+const circle5 = {
+    radius: 1,
+    draw() {
+        console.log('draw');
+    }
+};
+
+const another = {};
+for (key in circle5)
+    another[key] = circle5[key];
+console.log(another);
