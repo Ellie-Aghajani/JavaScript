@@ -62,3 +62,4 @@ delete square.color;
 delete square.draw;
 
 console.log(square);
+//can not re-assign an obj, but can add or remove properties
