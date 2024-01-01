@@ -42,3 +42,8 @@ function CreateCircle  (radius){
 }
 const circle3 = new CreateCircle(1);
 console.log(circle);
+
+//factory functions: we call a function 
+//which returns a new object, 
+//constructor functions: instead of returning object
+//use 'this' keyword
