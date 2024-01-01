@@ -95,3 +95,6 @@ const another = {};
 for (key in circle5)
     another[key] = circle5[key];
 console.log(another);
+
+//cleaner way
+const another2 = Object.assign({}, circle5);
