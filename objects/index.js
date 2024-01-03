@@ -156,3 +156,16 @@ function areEqual(address2, address3){
 
 console.log(areEqual(address2, address3));
 console.log(areSame(address2, address3));
+//
+//post obj
+const post = {
+    title:'a',
+    author: 'b',
+    body:'c',
+    views: 2,
+    comments : [
+        { author: 'b',body:'c',}, 
+        {author: 'd',body:'e'}
+    ],
+    isLive : true
+}
