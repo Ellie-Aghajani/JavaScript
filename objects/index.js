@@ -169,3 +169,17 @@ const post = {
     ],
     isLive : true
 }
+
+//constructor function for draft post:
+
+function DraftPost (title, author, body, ){
+    this.title = title;
+    this.author = author;
+    this.body = body;
+    this.views = 0;
+    this.comments = [];
+    this.isLive = false;
+}
+const draft = new DraftPost('a', 'b', 'c');
+
+//price rande
