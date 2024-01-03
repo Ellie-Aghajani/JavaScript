@@ -114,7 +114,7 @@ const address = {
 };
 
 function showAddress(address){
-    for(let key in addres){
+    for(let key in address){
         console.log(key, address[key]);
     }
 }
@@ -141,3 +141,18 @@ function CreateAddress(street, city, zipCode){
 }
 const address2 = new CreateAddress('a', 'b', 'c');
 console.log(address2);
+const address3 = new CreateAddress('a', 'b', 'c');
+console.log(address2);
+
+//example 3 
+//are two addresses exactly the same? return true
+function areSame(address2, address3){
+    return address2 === address3;
+}
+function areEqual(address2, address3){
+    return address2.city === address3.city && address2.street === address3.street && 
+    address2.zipCode === address3.zipCode;
+}
+
+console.log(areEqual(address2, address3));
+console.log(areSame(address2, address3));
