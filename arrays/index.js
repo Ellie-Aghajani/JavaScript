@@ -39,3 +39,15 @@ const first = num.shift();
 // Middle
 num.splice (2, 2);
 console. log (num);
+
+//empty an array
+let array = [1, 2, 3, 4];
+let another = array;
+// Solution 1
+array = [];
+
+// Solution 2
+ array.length = 0;
+
+// Solution 3
+array.splice(0, array. length);
