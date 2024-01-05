@@ -51,3 +51,14 @@ array = [];
 
 // Solution 3
 array.splice(0, array. length);
+
+//concat and slice
+const start = [1, 2, 31];
+    const second = [4, 5, 61];
+    
+    const combined = first. concat (second);
+  
+    const slice = combined.slice();
+  
+    console. log (combined) ;
+    console. log (slice);
