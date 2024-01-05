@@ -57,6 +57,7 @@ const start = [1, 2, 31];
     const second = [4, 5, 61];
     
     const combined = first. concat (second);
+    //[...first, ...second];   spread operator
   
     const slice = combined.slice();
   
