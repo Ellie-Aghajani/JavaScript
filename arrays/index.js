@@ -26,3 +26,16 @@ let movie2 = movies.find(function(movie){
     return movie.name ==='b';
 })
 console.log(movie2);
+
+//delete elements
+
+const num = [1, 2, 3, 4];
+4 // End
+const last = num.pop() ;
+
+// Beginning
+const first = num.shift();
+
+// Middle
+num.splice (2, 2);
+console. log (num);
