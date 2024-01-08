@@ -104,7 +104,9 @@ courses.sort(function(a, b){
 console.log(courses);
 //filter
 const nums = [1, -1, -2, 2];
-const filtered = nums.filter(function(value){
-    return value >= 0;
-});
+const filtered = nums.filter(n => n >= 0);
 console.log(filtered);
+
+const items = filtered.map( n => '<li>'+ n + '</li>');
+const html = '<ul>' + items.join(' ') + '</ul>';
+console.log(html);
