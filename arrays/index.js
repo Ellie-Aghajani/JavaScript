@@ -157,3 +157,18 @@ function except (array, excluded) {
         output.push(element);
   return output;
 };
+//example 4
+const array2 = [1, 1, 2, 3]
+
+function countOccurrences (array, searchElement){
+  let count = 0;
+  for (let number of array2){
+    if (number === searchElement)
+    count += 1;
+    
+  }
+  return count;
+
+};
+
+console.log(countOccurrences(array2, -1));
