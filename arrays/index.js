@@ -140,3 +140,12 @@ function arrayFromRange (min, max){
         arr.push(i);
     return arr;
 }
+//example 2
+console. log (includes(numbers, 1)) ;
+
+function includes (array, searchElement) {
+    for (let element of array)
+        if (element === searchElement)
+            return true;
+    return false;
+}
