@@ -67,6 +67,5 @@ console. log (slice);
 
  //Iterating an Array
 const numbers4 = [1, 2, 3];
-numbers4.forEach(function(number){
-    console.log(number)
-});
+    //a callback function that is passed in forEach method
+numbers4.forEach(number => console.log(number));
