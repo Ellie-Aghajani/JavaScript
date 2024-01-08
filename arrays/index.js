@@ -82,3 +82,10 @@ const parts = message.split(' ');
 console.log(parts);
 const combine = parts.join('-');
 console.log(combine);
+
+//sort
+const numbers5 = [2, 3, 11];
+numbers.sort();
+console.log(numbers);
+numbers.reverse();
+console.log(numbers) ;
