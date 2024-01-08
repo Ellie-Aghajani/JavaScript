@@ -75,3 +75,5 @@ numbers4.forEach(number => console.log(number));
 
 const joined = numbers.join(',');
 console.log(joined);
+
+//join and split
