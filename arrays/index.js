@@ -107,6 +107,11 @@ const nums = [1, -1, -2, 2];
 const filtered = nums.filter(n => n >= 0);
 console.log(filtered);
 
-const items = filtered.map( n => '<li>'+ n + '</li>');
-const html = '<ul>' + items.join(' ') + '</ul>';
-console.log(html);
+// const items = filtered.map( n => '<li>'+ n + '</li>');
+// const html = '<ul>' + items.join('') + '</ul>';
+// console.log(html);
+const items = filtered.map( n => {
+    return { value: n};
+     
+});
+console.log(items);
