@@ -77,3 +77,8 @@ const joined = numbers.join(',');
 console.log(joined);
 
 //join and split
+const message = 'This is my first message';
+const parts = message.split(' ');
+console.log(parts);
+const combine = parts.join('-');
+console.log(combine);
