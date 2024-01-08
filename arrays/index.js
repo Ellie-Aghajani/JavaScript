@@ -124,3 +124,10 @@ let sum = 0;
 for (n in numbers6)
     sum += n;
 console.log(sum);
+
+//reduce method
+const array = [1, 2, 3, 4, 5, 6];
+const total =  array.reduce(
+    (accumulator, currentValue) =>  accumulator+ currentValue
+);
+console.log(total);
