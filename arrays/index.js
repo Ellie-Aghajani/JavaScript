@@ -69,3 +69,9 @@ console. log (slice);
 const numbers4 = [1, 2, 3];
     //a callback function that is passed in forEach method
 numbers4.forEach(number => console.log(number));
+
+
+//join
+
+const joined = numbers.join(',');
+console.log(joined);
