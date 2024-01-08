@@ -117,4 +117,10 @@ const numbers6 = [1, -1, 2, 3];
 const item = numbers6
     .filter(n => n >= 0)
     . map(n => ({ value: n }));
-    console.log(items);
+console.log(items);
+
+//
+let sum = 0;
+for (n in numbers6)
+    sum += n;
+console.log(sum);
