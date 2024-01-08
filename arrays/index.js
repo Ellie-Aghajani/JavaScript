@@ -102,3 +102,9 @@ courses.sort(function(a, b){
 
 });
 console.log(courses);
+//filter
+const nums = [1, -1, -2, 2];
+const filtered = nums.filter(function(value){
+    return value >= 0;
+});
+console.log(filtered);
