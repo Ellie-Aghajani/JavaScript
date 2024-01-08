@@ -112,3 +112,9 @@ console.log(filtered);
 // console.log(html);
 const items = filtered.map( n =>({ value: n}));
 console.log(items);
+//chaining
+const numbers6 = [1, -1, 2, 3];
+const item = numbers6
+    .filter(n => n >= 0)
+    . map(n => ({ value: n }));
+    console.log(items);
