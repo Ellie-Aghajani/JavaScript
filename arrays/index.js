@@ -172,3 +172,42 @@ function countOccurrences (array, searchElement){
 };
 
 console.log(countOccurrences(array2, -1));
+//example 5
+let array = [1, 2, 3];
+
+function getMax(array) {
+  if( array.length === 0){
+    return undefined;
+  }
+  let max = array[0];
+  for (let i of array){
+    if (array[i] > max){
+      max = array[i];
+    }
+  }
+  return max;
+}
+console.log(getMax(array));
+//************************/
+let array = [1, 2, 3];
+
+function getMax(array) {
+  let accumulator = array[0];
+  array.reduce((accumulator, currentValue) => {
+    // if (currentValue > accumulator) return currentValue;
+    // return accumulator;
+    return (currentValue > accumulator) ? currentValue : accumulator;
+  })
+}
+console.log(getMax(array));
+//*****************/
+let array = [1, 2, 3, 4];
+
+function getMax (array){
+  if (array.length === 0) return undefined;
+  array.reduce((a, b) => {return (a > b) ? a : b;})
+
+}
+console.log(getMax(array));
+
+//
