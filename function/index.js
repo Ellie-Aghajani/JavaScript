@@ -13,3 +13,14 @@ run();
 const run = function() {
   console.log('run');
 }; 
+//sum
+function sum(){
+  let total = 0;
+  for (let value of arguments){
+   total += value;
+  }
+  return total;
+
+}
+console.log(sum(1, 2, 3));
+//
