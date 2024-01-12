@@ -7,3 +7,4 @@ function walk() {
 let run = function walk() {
   console.log('run');
 };
+run();
