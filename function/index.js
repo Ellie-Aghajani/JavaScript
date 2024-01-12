@@ -8,3 +8,8 @@ let run = function walk() {
   console.log('run');
 };
 run();
+
+//Anonymous Function Expression
+const run = function() {
+  console.log('run');
+}; 
