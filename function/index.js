@@ -39,3 +39,16 @@ function interest (principal, rate = 3.5 , years ){
 
 }
 interest(800000, undefined, 15);
+
+
+//getters and setters
+const person = {
+  firstName: 'Ellie',
+  lastName : 'Aghajani',
+  // fullName () {
+  //   return `${this.firstName} ${this.lastName}`
+  // }      this is read only
+  get fullName () {
+    return `${this.firstName} ${this.lastName}`
+  }
+}
