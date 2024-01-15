@@ -47,7 +47,8 @@ const person = {
   lastName : 'Aghajani',
   // fullName () {
   //   return `${this.firstName} ${this.lastName}`
-  // }      this is read only
+  // }      this is read only 
+  // to call this method: person.fullName()
   get fullName () {
     return `${this.firstName} ${this.lastName}`
   }
