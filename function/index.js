@@ -42,6 +42,8 @@ interest(800000, undefined, 15);
 
 
 //getters and setters
+// getters => access properties
+// setters => change (mutate) them
 const person = {
   firstName: 'Ellie',
   lastName : 'Aghajani',
@@ -51,5 +53,13 @@ const person = {
   // to call this method: person.fullName()
   get fullName () {
     return `${this.firstName} ${this.lastName}`
-  } // call it: person.fullname
+  }, // call it: person.fullname
+  set fullName (value) {
+    const parts = value.split(' ');
+    this.firstName = parts[0];
+    this.lastName =parts[1];
+  }
 }
+
+person. fullName = 'John Smith';
+console.log(person);
