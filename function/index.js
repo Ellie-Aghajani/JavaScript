@@ -51,5 +51,5 @@ const person = {
   // to call this method: person.fullName()
   get fullName () {
     return `${this.firstName} ${this.lastName}`
-  }
+  } // call it: person.fullname
 }
