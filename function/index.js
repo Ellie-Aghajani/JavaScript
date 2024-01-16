@@ -82,3 +82,21 @@ const address = {
 }
 address.fullAddress = '2, Elliot, Vancouver';
 console.log(address);
+
+//Example 2
+const greetings = {
+  firstName : 'Ellie',
+  lastName: 'Aghajani',
+  get greet (){
+    return `Hello ${this.firstName} ${this.lastName}!`
+  },
+  set greet (value){
+    const parts = value.split(' ');
+    this.firstName = parts[1];
+    this.lastName = parts[2]
+
+  }
+}
+console.log(greetings.greet);
+greetings.greet = 'Hello Z A !';
+console.log(greetings.greet);
