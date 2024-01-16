@@ -61,5 +61,24 @@ const person = {
   }
 }
 
-person. fullName = 'John Smith';
+person.fullName = 'John Smith';
 console.log(person);
+
+//Example
+const address = {
+  number : 1,
+  street: 'Victoria', 
+  city: 'Vancouver',
+  set fullAddress (value){
+    const parts = value.split(',');
+    this.number = parts[0];
+    this.street = parts[1];
+    this.city = parts[2]
+    
+  },
+  get fullAddress (){
+    return `${this.number}, ${this.street}, ${this.city}`
+  }
+}
+address.fullAddress = '2, Elliot, Vancouver';
+console.log(address);
