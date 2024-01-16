@@ -84,6 +84,7 @@ address.fullAddress = '2, Elliot, Vancouver';
 console.log(address);
 
 //Example 2
+//error handling
 const greetings = {
   firstName : 'Ellie',
   lastName: 'Aghajani',
@@ -91,12 +92,23 @@ const greetings = {
     return `Hello ${this.firstName} ${this.lastName}!`
   },
   set greet (value){
+    if (typeof value !== 'string'){
+      throw new Error('invalid input');
+    }
     const parts = value.split(' ');
     this.firstName = parts[1];
-    this.lastName = parts[2]
-
+    this.lastName = parts[2];
   }
+};
+
+try{
+  greetings.greet = null;
 }
+catch(e){
+  alert(e);
+}
+
 console.log(greetings.greet);
 greetings.greet = 'Hello Z A !';
 console.log(greetings.greet);
+
