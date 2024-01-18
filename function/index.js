@@ -132,3 +132,11 @@ console.log(greetings.greet);
 greetings.greet = 'Hello Z A !';
 console.log(greetings.greet);
 
+//global vs local variables
+
+const color = 'red';//global
+
+function display() {
+  const color = 'blue';//local
+  console.log(color);
+}
