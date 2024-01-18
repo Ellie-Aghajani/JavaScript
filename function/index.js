@@ -55,12 +55,20 @@ const person = {
     return `${this.firstName} ${this.lastName}`
   }, // call it: person.fullname
   set fullName (value) {
+    if (typeof value !== 'string'){
+      throw new Error('the value is not a string.');
+    }
     const parts = value.split(' ');
     this.firstName = parts[0];
     this.lastName =parts[1];
   }
 }
-
+try{
+  person.fullName = null;
+}
+catch(e){
+  console.log(e);
+}
 person.fullName = 'John Smith';
 console.log(person);
 
