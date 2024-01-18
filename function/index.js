@@ -144,3 +144,26 @@ function display() {
 //var vs. let/const
 var color = 'red';
 //attaches to Window object
+
+//this keyword:
+//the object that is executing the current function
+
+//method (function inside an object) => obj
+const video = {
+  title : 'a',
+  play (){
+    console.log(this);
+  }
+};
+//function => Window object
+function playVideo (){
+  console.log(this);
+};
+playVideo();
+
+//call a function using the new operator:
+function Video(title){
+  this.title = title; //this creates an empty object{} and adds to it
+  console.log(this);
+}
+const v = new Video('a'); 
