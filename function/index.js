@@ -167,3 +167,18 @@ function Video(title){
   console.log(this);
 }
 const v = new Video('a'); 
+
+//solve the problem of pointing this to the Window obj in a callback function:
+//use the second parameter of forEach loop:
+
+const video = {
+  title : 'a',
+  tags : ['a', 'b', 'c'],
+  showTags(){
+    this.tags.forEach((tag)=>{
+      console.log(this.title, tag);
+    }, this)
+
+  }
+};
+video.showTags();
