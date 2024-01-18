@@ -177,7 +177,23 @@ const video = {
   showTags(){
     this.tags.forEach((tag)=>{
       console.log(this.title, tag);
-    }, this)
+    }, this ) //second parameter can be an object, so we use 'this' to refer to the current obj
+
+  }
+};
+video.showTags();
+
+//changing the value of this: 
+//define a const and asign it to this :)
+//const self = this;
+const video = {
+  title : 'a',
+  tags : ['a', 'b', 'c'],
+  showTags(){
+    const self = this;
+    this.tags.forEach((tag)=>{
+      console.log(self.title, tag);
+    })
 
   }
 };
