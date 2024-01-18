@@ -64,12 +64,16 @@ const person = {
 person.fullName = 'John Smith';
 console.log(person);
 
+
 //Example
 const address = {
   number : 1,
   street: 'Victoria', 
   city: 'Vancouver',
   set fullAddress (value){
+    if (typeof value !== 'string'){
+      throw new Error('input is not a valid string.')
+    };
     const parts = value.split(',');
     this.number = parts[0];
     this.street = parts[1];
@@ -80,8 +84,16 @@ const address = {
     return `${this.number}, ${this.street}, ${this.city}`
   }
 }
+try {
+  address.fullAddress = null;
+}
+catch(e){
+  console.log(e);
+}
 address.fullAddress = '2, Elliot, Vancouver';
 console.log(address);
+
+
 
 //Example 2
 //error handling
