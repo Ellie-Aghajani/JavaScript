@@ -140,3 +140,7 @@ function display() {
   const color = 'blue';//local
   console.log(color);
 }
+ 
+//var vs. let/const
+var color = 'red';
+//attaches to Window object
