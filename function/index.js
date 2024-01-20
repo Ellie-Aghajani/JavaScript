@@ -229,3 +229,12 @@ function sum(...args){
   return args.reduce((a, b) => a + b);
 }
 console.log(sum(1, 2, 3, 4));
+
+//create circle obj with radius, area(read-only) property
+const circle = {
+  rarius: 1,
+  get area(){
+    return Math.PI * this.radius * this.radius ;
+  }
+};
+console.log(circle.area);
