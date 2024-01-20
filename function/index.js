@@ -238,3 +238,24 @@ const circle = {
   }
 };
 console.log(circle.area);
+
+//example
+const numbers = [1, 2, 3, 4];
+const count = countOccurrences (numbers, 1);
+console.log(count);
+
+function countOccurrences (array, searchElement) {
+  if (!Array.isArray(array)){
+    throw new Error('input is not a valid array');
+  }
+  return array.reduce((accumulator, current) => {
+    const occurrence = (current === searchElement) ? 1: 0;
+    return accumulator + occurrence;
+  }, 0);
+};
+try{
+  console.log(countOccurrences(null, 1));
+}
+catch(e){
+  console.log(e);
+}
