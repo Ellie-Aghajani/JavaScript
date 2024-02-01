@@ -14,7 +14,12 @@ Object.defineProperty(obj, 'propertyName', {
     writable: false,
     enumerable: false
 });
-
+//Example
+let car = { make: 'Toyota'};
+Object.defineProperty(car, 'make', {
+    writable: false
+});
+car.make = 'Ford';
 // Constructors have a "prototype" property. It returns the object 
 // that will be used as the prototype for objects created by the constructor. 
 Object.prototype === Object.getPrototypeOf({})
