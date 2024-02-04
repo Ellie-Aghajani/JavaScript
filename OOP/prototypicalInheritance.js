@@ -3,8 +3,8 @@ function Shape() {}
 function Circle() {}
 
 // Prototypical inheritance 
-Circle.prototype = Object.create(Shape.prototype);
-Circle.prototype.constructor = Circle; 
+Circle.prototype = Object.create(Shape.prototype);//this is to inherit the shape properties
+Circle.prototype.constructor = Circle; //this is to reset constructor, not to create shape instead of a circle
 
 function Rectangle(color) {
     // To call the super constructor 
