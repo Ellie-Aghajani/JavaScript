@@ -23,6 +23,15 @@ car.make = 'Ford';
 // Constructors have a "prototype" property. It returns the object 
 // that will be used as the prototype for objects created by the constructor. 
 Object.prototype === Object.getPrototypeOf({})
+//Example:
+function Circle(radius) {
+    this.radius = radius;
+}
+const circle = new Circle(9); 
+Circle.prototype
+
+
+
 Array.prototype === Object.getPrototypeOf([])
 
 // All objects created with the same constructor will have the same prototype. 
