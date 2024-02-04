@@ -26,10 +26,16 @@ Object.prototype === Object.getPrototypeOf({})
 //Example:
 function Circle(radius) {
     this.radius = radius;
+    // this.draw = function(){
+    //     console.log("draw");
+    // };
 }
 const circle = new Circle(9); 
-Circle.prototype
 
+Circle.prototype.draw = function(){
+        console.log("draw");
+    };
+//move method from constructor funtion to its prototype
 
 
 Array.prototype === Object.getPrototypeOf([])
