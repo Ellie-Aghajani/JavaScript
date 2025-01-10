@@ -1,7 +1,2 @@
-//write a function to return Even nums
-function evenNums (array){
-    return array.filter(number => (number % 2 === 0));
-};
-const array = [1, 2, 3, 4, 5, 6];
-const result = evenNums(array);
-console.log(result);
+//Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples
+//2 of 3 and 5
