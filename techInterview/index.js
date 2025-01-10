@@ -18,12 +18,15 @@ function fizzbuzz(n) {
 
 // another way to answer
 
-const fizzBuzz = (n) => {
-  let retString = "";
+const fizzBuzz = () => {
   for (let i = 0; i <= 100; i++) {
+    let retString = "";
     if (n % 5 === 0) retString += "fizz";
     if (n % 3 === 0) retString += "buzz";
-    if (n % 5 !== 0 || n % 3 !== 0) retString += n;
+    if (n % 3 !== 0 || n % 5 === 0) retString += i;
   }
-  return retString;
+  console.log(retString);
 };
+
+console.log(fizzBuzz);
+console.log(fizzbuzz);
