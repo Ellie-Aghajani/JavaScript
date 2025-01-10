@@ -19,14 +19,16 @@
 // another way to answer
 
 const fizzBuzz = () => {
+  const results = [];
   for (let i = 0; i <= 100; i++) {
     let retString = "";
     if (i % 5 === 0) retString += "fizz";
     if (i % 3 === 0) retString += "buzz";
-    if (i % 3 !== 0 || i % 5 === 0) retString += i;
+    if (retString === "") retString = i;
+    results.push(retString);
   }
-  console.log(retString);
+  return results;
 };
 
-console.log(fizzBuzz());
-// console.log(fizzbuzz());
+const output = fizzBuzz();
+console.log(output);
