@@ -28,5 +28,5 @@ const fizzBuzz = () => {
   console.log(retString);
 };
 
-console.log(fizzBuzz);
-console.log(fizzbuzz);
+console.log(fizzBuzz());
+console.log(fizzbuzz());
