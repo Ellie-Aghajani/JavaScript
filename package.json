@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Ellie-Aghajani/JavaScript/issues"
   },
-  "homepage": "https://github.com/Ellie-Aghajani/JavaScript#readme"
+  "homepage": "https://github.com/Ellie-Aghajani/JavaScript#readme",
+  "dependencies": {
+    "axios": "^1.7.9"
+  }
 }
