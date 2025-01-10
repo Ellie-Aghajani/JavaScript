@@ -15,3 +15,15 @@ function fizzbuzz(n) {
   }
   return;
 }
+
+// another way to answer
+
+const fizzBuzz = (n) => {
+  let retString = "";
+  for (let i = 0; i <= 100; i++) {
+    if (n % 5 === 0) retString += "fizz";
+    if (n % 3 === 0) retString += "buzz";
+    if (n % 5 !== 0 || n % 3 !== 0) retString += n;
+  }
+  return retString;
+};
