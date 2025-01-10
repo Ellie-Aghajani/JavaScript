@@ -21,9 +21,9 @@
 const fizzBuzz = () => {
   for (let i = 0; i <= 100; i++) {
     let retString = "";
-    if (n % 5 === 0) retString += "fizz";
-    if (n % 3 === 0) retString += "buzz";
-    if (n % 3 !== 0 || n % 5 === 0) retString += i;
+    if (i % 5 === 0) retString += "fizz";
+    if (i % 3 === 0) retString += "buzz";
+    if (i % 3 !== 0 || i % 5 === 0) retString += i;
   }
   console.log(retString);
 };
