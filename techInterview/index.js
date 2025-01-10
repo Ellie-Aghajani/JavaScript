@@ -2,17 +2,19 @@
 //2 of 3 and 5
 
 const fizzbuzz = () => {
+  let results = [];
   for (let i = 0; i <= 100; i++) {
     if (i % 5 === 0 && i % 3 === 0) {
-      console.log(i, "fizzbuzz");
+      results.push(`${i} "fizzbuzz"`);
     } else if (i % 5 === 0) {
-      console.log(i, "buzz");
+      results.push(`${i} "buzz"`);
     } else if (i % 3 === 0) {
-      console.log(i, "fizz");
+      results.push(`${i} "fizz"`);
     } else {
-      console.log(i);
+      results.push(`${i}`);
     }
   }
+  return results;
 };
 const fff = fizzbuzz();
 console.log(fff);
