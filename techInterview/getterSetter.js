@@ -4,28 +4,28 @@
 //check if they entered both first and last name
 
 const person = {
-  firstName: "Ellie",
-  lastName: "Aghajani",
-  get fullName() {
-    return `${this.firstName} ${this.lastName}`;
+  fn: "a",
+  ln: "b",
+  get full() {
+    return `${this.fn} ${this.ln}`;
   },
-  set fullName(input) {
-    if (typeof input !== "string") {
-      throw new Error("Enter valid first and Last name");
+  set full(value) {
+    if (typeof value !== "string" || value.trim() === "") {
+      throw new Error("invalid input");
     }
 
-    const parts = input.split(" ");
+    const parts = value.split(" ");
     if (parts.length !== 2) {
-      throw new Error("Enter both first and last name");
+      throw new Error("enter both fn and ln");
     }
-    this.firstName = parts[0];
-    this.lastName = parts[1];
+
+    this.fn = parts[0];
+    this.ln = parts[1];
   },
 };
 
 try {
-  person.fullName = "";
-  console.log(person.fullName);
+  person.full = "";
 } catch (e) {
   console.log(e.message);
 }
