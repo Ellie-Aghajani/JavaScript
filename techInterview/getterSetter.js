@@ -4,7 +4,22 @@
 const person = {
   firstName: "Ellie",
   lastName: "Aghajani",
-  fullName() {
+  get fullName() {
     return `${this.firstName} ${this.lastName}`;
   },
+  set fullName(input) {
+    const parts = input.split(" ");
+    if (parts.length !== 2) {
+      throw new Error("Enter first and last name");
+      return;
+    }
+    this.firstName = parts[0];
+    this.lastName = parts[1];
+  },
 };
+
+try {
+  person.fullName = "E A";
+} catch (e) {
+  alert(e);
+}
