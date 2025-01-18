@@ -11,3 +11,6 @@ const doubledArray = (array) => {
   }
   return doubled;
 };
+
+array = [1, 2, 3];
+console.log(transform(array));
