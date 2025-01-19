@@ -82,3 +82,32 @@ const filterEvenNums = (array) => {
 };
 
 console.log(filterEvenNums([1, 2, 3, 4, 5, 6]));
+
+// Solution 1: Using reduce()
+const sumWithReduce = (numbersArray) => {
+  // reduce() accumulates values by applying a function to each element
+  return numbersArray.reduce((sum, currentNumber) => sum + currentNumber, 0);
+};
+
+// Solution 2: Using a loop
+const sumWithLoop = (numbersArray) => {
+  let totalSum = 0;
+  for (let number of numbersArray) {
+    totalSum += number; // Add each number to the total
+  }
+  return totalSum;
+};
+
+// Example Usage:
+console.log(sumWithReduce([1, 2, 3, 4])); // Output: 10
+console.log(sumWithLoop([1, 2, 3, 4])); // Output: 10
+
+// Explanation for reduce():
+// 1. The first argument is the accumulator (sum), and the second is the current element.
+// 2. reduce() iterates over the array, applying the function to each element.
+
+//3. Use `reduce` to Calculate the Sum of an Array**
+// Question: Write a function to calculate the sum of an array of numbers.
+const sumOfArray = (array) => {
+  return array.reduce((a, b) => a + b);
+};
