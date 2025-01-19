@@ -136,8 +136,44 @@ const logKeyValues = (obj) => {
   }
 };
 
-const logKeyValue = (obj) => {
-  Object.entries(obj).forEach(([key, value]) => {
+//Object.entries(obj) returns an array of [key, value] pairs.
+//now that you have an array, use forEach on it and destructure these pairs in the .forEach() callback.
+const showKeyValues = (obj) => {
+  Object.entries(obj).forEach((key, value) => {
     console.log(`Key: ${key}, Value: ${value}`);
   });
 };
+//Destructuring is a feature in JavaScript that allows you to unpack values from arrays or properties from objects into separate variables. When used with .forEach(), destructuring can make it easier to access key-value pairs or individual elements.
+
+//Example: Destructuring in Arrays
+const fruits = [
+  ["apple", "red"],
+  ["banana", "yellow"],
+  ["grape", "purple"],
+];
+
+fruits.forEach(([name, color]) => {
+  console.log(`Fruit: ${name}, Color: ${color}`);
+});
+//[name, color] destructures the elements of each sub-array into two variables: name and color.
+//Destructuring with .forEach() and Objects
+
+//Implement a Custom `forEach`**
+// Question: Write a custom implementation of Array.prototype.forEach.
+
+Array.prototype.myForEach = function (callback) {
+  // Iterate over the array
+  for (let i = 0; i < this.length; i++) {
+    // Call the callback with the current element, index, and array
+    callback(this[i], i, this);
+  }
+};
+
+// Example Usage:
+[1, 2, 3].myForEach((value, index) =>
+  console.log(`Index: ${index}, Value: ${value}`)
+);
+
+// Explanation:
+// 1. The callback function receives the current element, index, and array as arguments.
+// 2. myForEach works similarly to the built-in forEach method.
