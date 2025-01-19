@@ -3,12 +3,17 @@
 // Swap the Javascript object's key with its values and return the resulting object
 // {a: 1 , b : 2, c: 3} returns: {1:"a", 2:"b", 3:"c"}
 
-//obj -> obj[key]= key;
-//swapped -> swapped[key] = obj[key];
-const swap = (obj) => {
+//obj -> key : obj[key]
+//swapped -> key : swapped[key]
+
+const swappedObj = (obj) => {
   const swapped = {};
+  //loop to swap
   for (let key in obj) {
-    swapped[key] = obj[key];
+    swapped[obj[key]] = key;
   }
   return swapped;
 };
+
+const obj = { a: 1, b: 2, c: 3 };
+console.log(swappedObj(obj));

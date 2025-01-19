@@ -14,3 +14,15 @@ const doubledArray = (array) => {
 
 array = [1, 2, 3];
 console.log(transform(array));
+
+const swappedObj = (obj) => {
+  const swapped = {};
+  //loop to swap
+  for (let key in obj) {
+    swapped[Number(obj[key])] = key;
+  }
+  return swapped;
+};
+
+const obj = { a: 1, b: 2, c: 3 };
+console.log(swappedObj(obj));
