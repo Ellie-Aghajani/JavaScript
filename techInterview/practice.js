@@ -19,7 +19,7 @@ const swappedObj = (obj) => {
   const swapped = {};
   //loop to swap
   for (let key in obj) {
-    swapped[Number(obj[key])] = key;
+    swapped[obj[key]] = key;
   }
   return swapped;
 };
