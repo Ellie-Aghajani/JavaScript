@@ -117,3 +117,27 @@ const sumOfArrayIndex = (array) => {
 const deepCloneObject = (obj) => {
   return JSON.parse(JSON.stringify(obj));
 };
+
+//shalow clone an object
+const shallowCloneObj = (obj) => {
+  return { ...obj };
+};
+
+// Iterate Over an Object**
+// Question: Write a function to iterate over an object and log its keys and values.
+// Explanation:
+// 1. for...in iterates over all enumerable properties of the object.
+// 2. hasOwnProperty ensures inherited properties are skipped.
+const logKeyValues = (obj) => {
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      console.log(`Key: ${key}, Value: ${obj[key]}`);
+    }
+  }
+};
+
+const logKeyValue = (obj) => {
+  Object.entries(obj).forEach(([key, value]) => {
+    console.log(`Key: ${key}, Value: ${value}`);
+  });
+};
