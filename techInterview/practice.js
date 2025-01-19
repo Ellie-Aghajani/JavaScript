@@ -177,3 +177,52 @@ Array.prototype.myForEach = function (callback) {
 // Explanation:
 // 1. The callback function receives the current element, index, and array as arguments.
 // 2. myForEach works similarly to the built-in forEach method.
+
+// Implement a Custom `map`**
+// Question: Write a custom implementation of Array.prototype.map.
+// Explanation:
+// 1. myMap iterates over the array and applies the callback to each element.
+// 2. It returns a new array with the transformed elements, just like the built-in map.
+Array.prototype.myMap = function (callback) {
+  const results = [];
+  for (let i = 0; i < this.length; i++) {
+    const transformed = callback(this[i], i, this);
+    results.push(transformed);
+  }
+  return results;
+};
+
+// Closure Example**
+// Question: Write a function that demonstrates closure by maintaining a private variable.
+// Explanation:
+// 1. Closure allows the inner functions to access the outer function's variables.
+// 2. count is private to createCounter but accessible through the returned methods.
+const closure = () => {
+  let count = 0;
+
+  return {
+    increment: () => ++count,
+    decrement: () => --count,
+    getCount: () => count,
+  };
+};
+
+//Check if a String Contains Only Unique Characters**
+// Question: Write a function to check if a string has all unique characters.
+
+const hasUniqueCharacters = (inputString) => {
+  const seenCharacters = new Set(); // Use a Set to store characters
+  for (let char of inputString) {
+    if (seenCharacters.has(char)) return false; // Duplicate found
+    seenCharacters.add(char); // Add character to the set
+  }
+  return true; // No duplicates
+};
+
+// Example Usage:
+console.log(hasUniqueCharacters("abcde")); // Output: true
+console.log(hasUniqueCharacters("hello")); // Output: false
+
+// Explanation:
+// 1. A Set only stores unique values, making it perfect for this task.
+// 2. If a character is already in the set, it's a duplicate.
