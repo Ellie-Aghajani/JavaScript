@@ -110,3 +110,10 @@ const sumOfArrayIndex = (array) => {
   }
   return total;
 };
+
+// **Deep Clone an Object**
+// Question: Write a function to deep clone an object.
+// Convert the object to a JSON string and then parse it back
+const deepCloneObject = (obj) => {
+  return JSON.parse(JSON.stringify(obj));
+};
