@@ -26,3 +26,26 @@ const swappedObj = (obj) => {
 
 const obj = { a: 1, b: 2, c: 3 };
 console.log(swappedObj(obj));
+
+//return the sum of arguments
+//use(for..of)
+const sum = (...numbers) => {
+  let total = 0;
+  for (let number of numbers) {
+    total += number;
+  }
+  return total;
+};
+
+console.log(sum(1, 2, 3, 4));
+
+//use for(let i ...)
+const totalNumbers = (...numbers) => {
+  let total = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+  return total;
+};
+
+console.log(totalNumbers(1, 2, 3, 4, 5));
