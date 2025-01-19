@@ -209,20 +209,13 @@ const closure = () => {
 
 //Check if a String Contains Only Unique Characters**
 // Question: Write a function to check if a string has all unique characters.
-
-const hasUniqueCharacters = (inputString) => {
-  const seenCharacters = new Set(); // Use a Set to store characters
-  for (let char of inputString) {
-    if (seenCharacters.has(char)) return false; // Duplicate found
-    seenCharacters.add(char); // Add character to the set
-  }
-  return true; // No duplicates
-};
-
-// Example Usage:
-console.log(hasUniqueCharacters("abcde")); // Output: true
-console.log(hasUniqueCharacters("hello")); // Output: false
-
-// Explanation:
 // 1. A Set only stores unique values, making it perfect for this task.
 // 2. If a character is already in the set, it's a duplicate.
+const allUniq = (string) => {
+  const seenCharacters = new Set();
+  for (let char of string) {
+    if (seenCharacters.has(char)) return false;
+    seenCharacters.add(char);
+  }
+  return true;
+};
