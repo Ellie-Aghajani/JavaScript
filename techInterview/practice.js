@@ -1,4 +1,4 @@
-// Question: Write a function to transform an array of numbers by doubling each value.
+// Question1: Write a function to transform an array of numbers by doubling each value.
 //solution 1
 const transform = (array) => {
   return array.map((element) => element * 2);
@@ -15,7 +15,7 @@ const doubledArray = (array) => {
 array = [1, 2, 3];
 console.log(transform(array));
 
-//swapp key values in an object
+//Question2: swapp key values in an object
 const swappedObj = (obj) => {
   const swapped = {};
   //loop to swap
@@ -28,7 +28,7 @@ const swappedObj = (obj) => {
 const obj = { a: 1, b: 2, c: 3 };
 console.log(swappedObj(obj));
 
-//return the sum of arguments
+//Question3: return the sum of arguments
 //use(for..of)
 const sum = (...numbers) => {
   let total = 0;
@@ -51,7 +51,7 @@ const totalNumbers = (...numbers) => {
 
 console.log(totalNumbers(1, 2, 3, 4, 5));
 
-//2. Use `filter` to Remove Odd Numbers**
+//Question4:  Use `filter` to Remove Odd Numbers**
 // Question: Write a function to filter out odd numbers from an array.
 // Explanation for filter():
 // 1. filter() keeps elements that satisfy the condition (even numbers here).
@@ -83,31 +83,30 @@ const filterEvenNums = (array) => {
 
 console.log(filterEvenNums([1, 2, 3, 4, 5, 6]));
 
-// Solution 1: Using reduce()
-const sumWithReduce = (numbersArray) => {
-  // reduce() accumulates values by applying a function to each element
-  return numbersArray.reduce((sum, currentNumber) => sum + currentNumber, 0);
-};
-
-// Solution 2: Using a loop
-const sumWithLoop = (numbersArray) => {
-  let totalSum = 0;
-  for (let number of numbersArray) {
-    totalSum += number; // Add each number to the total
-  }
-  return totalSum;
-};
-
-// Example Usage:
-console.log(sumWithReduce([1, 2, 3, 4])); // Output: 10
-console.log(sumWithLoop([1, 2, 3, 4])); // Output: 10
-
+//Question5:  Use `reduce` to Calculate the Sum of an Array**
+// Question: Write a function to calculate the sum of an array of numbers.
 // Explanation for reduce():
 // 1. The first argument is the accumulator (sum), and the second is the current element.
 // 2. reduce() iterates over the array, applying the function to each element.
-
-//3. Use `reduce` to Calculate the Sum of an Array**
-// Question: Write a function to calculate the sum of an array of numbers.
 const sumOfArray = (array) => {
+  if (array.length === 0) return 0;
   return array.reduce((a, b) => a + b);
+};
+
+const sumOfArrayLoop = (array) => {
+  if (array.length === 0) return 0;
+  let total = 0;
+  for (let number of array) {
+    total += number;
+  }
+  return total;
+};
+
+const sumOfArrayIndex = (array) => {
+  if (array.length === 0) return 0;
+  let total = 0;
+  for (let i = 0; i < array.length; i++) {
+    total += array[i];
+  }
+  return total;
 };
