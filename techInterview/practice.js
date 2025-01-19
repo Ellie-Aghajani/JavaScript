@@ -15,6 +15,7 @@ const doubledArray = (array) => {
 array = [1, 2, 3];
 console.log(transform(array));
 
+//swapp key values in an object
 const swappedObj = (obj) => {
   const swapped = {};
   //loop to swap
@@ -49,3 +50,35 @@ const totalNumbers = (...numbers) => {
 };
 
 console.log(totalNumbers(1, 2, 3, 4, 5));
+
+//2. Use `filter` to Remove Odd Numbers**
+// Question: Write a function to filter out odd numbers from an array.
+// Explanation for filter():
+// 1. filter() keeps elements that satisfy the condition (even numbers here).
+// 2. It doesn't modify the original array and returns a new one.
+//use filter
+const filterEven = (array) => {
+  return array.filter((number) => number % 2 === 0);
+};
+//use loop for..of
+const filterEvenNum = (array) => {
+  const even = [];
+  for (let number of array) {
+    if (number % 2 === 0) {
+      even.push(number);
+    }
+  }
+  return even;
+};
+//use loop for..index
+const filterEvenNums = (array) => {
+  const even = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      even.push(array[i]);
+    }
+  }
+  return even;
+};
+
+console.log(filterEvenNums([1, 2, 3, 4, 5, 6]));
