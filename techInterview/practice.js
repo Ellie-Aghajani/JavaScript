@@ -233,3 +233,43 @@ const debounce = (callback, delay) => {
     timer = setTimeout(() => callback(...args), delay); // Set a new timer
   };
 };
+
+//Write a function to return an array of all the drivers names
+const drivers = {
+  AgF4g: {
+    name: "Daniel Ricciardo",
+    team: "Renault F1 Team",
+    cars: ["Toyota Corolla 2018", "BMW M3", "F1"],
+  },
+  FfE4c: {
+    name: "Lando Norris",
+    team: "McLaren",
+    cars: ["DB8", "CLK489", "F1"],
+  },
+  Df4cf: { name: "Sebastian Vettel", team: "Ferrari", cars: ["BMW M3", "F1"] },
+  I4fTw: { name: "Nicholas Latifi", team: "Renault F1 Team", cars: ["F1"] },
+  pT4vD: { name: "Kimi Raikkonen", team: "Alfa Romeo", cars: ["BMW M3", "F1"] },
+  RaMfV: { name: "Romain Grosjean", team: "Ferrari", cars: ["Opel Cadet"] },
+};
+//team-> drivers[key].team
+//name-> drivers[key].name
+const arrayOfNames = (obj) => {
+  let results = [];
+  for (let key in obj) {
+    results.push(obj[key].name);
+  }
+  return results;
+};
+//Write a function that returns an object with the
+//key being Team Name and
+//the value being an array of drivers for that team
+
+// { teamName : ['Mos', 'Dan']};
+const objTeamDriver = (obj) => {
+  const results = {};
+  results[key] = [];
+  for (let key in obj) {
+    const team = drivers[key].team;
+    const driverName = drivers[key].name;
+  }
+};
