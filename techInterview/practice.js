@@ -280,3 +280,20 @@ const teamDriver = (obj) => {
   }
   return results;
 };
+
+// Question: Write a throttle function to limit how often a function can be called.
+
+const throttle = (callback, limit) => {
+  let inThrottle = false; // Flag to prevent immediate calls
+  return (...args) => {
+    if (!inThrottle) {
+      callback(...args); // Call the function
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit); // Reset throttle after limit
+    }
+  };
+};
+
+// Explanation:
+// 1. throttle ensures the function is executed at most once every specified interval.
+// 2. Useful for events like scroll or resize to improve performance.
