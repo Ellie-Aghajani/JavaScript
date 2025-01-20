@@ -222,6 +222,9 @@ const allUniq = (string) => {
 
 // Question: Write a debounce function
 //to limit how often a function is executed.
+// Explanation:
+// 1. debounce delays the execution of the function until after the specified delay.
+// 2. It resets the timer on every call, so the function only runs once the calls stop.
 
 const debounce = (callback, delay) => {
   let timer; // Timer to control execution
@@ -230,11 +233,3 @@ const debounce = (callback, delay) => {
     timer = setTimeout(() => callback(...args), delay); // Set a new timer
   };
 };
-
-// Example Usage:
-const logMessage = debounce((message) => console.log(message), 500);
-logMessage("Hello"); // Only runs if no new call is made within 500ms
-
-// Explanation:
-// 1. debounce delays the execution of the function until after the specified delay.
-// 2. It resets the timer on every call, so the function only runs once the calls stop.
