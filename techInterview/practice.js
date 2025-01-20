@@ -297,3 +297,28 @@ const throttle = (callback, limit) => {
 // Explanation:
 // 1. throttle ensures the function is executed at most once every specified interval.
 // 2. Useful for events like scroll or resize to improve performance.
+
+//Use `Promise.all` to Handle Multiple Promises**
+// Question: Write a function to fetch data from multiple APIs simultaneously.
+
+const fetchMultipleAPIs = async (urls) => {
+  try {
+    // Use Promise.all to fetch all URLs at the same time
+    const responses = await Promise.all(
+      urls.map((url) => fetch(url).then((res) => res.json()))
+    );
+    return responses; // Return an array of results
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
+
+// Example Usage:
+fetchMultipleAPIs([
+  "https://jsonplaceholder.typicode.com/posts",
+  "https://jsonplaceholder.typicode.com/users",
+]).then((data) => console.log(data));
+
+// Explanation:
+// 1. Promise.all waits for all promises to resolve or rejects if any promise fails.
+// 2. map() applies fetch to each URL, and responses are converted to JSON.
