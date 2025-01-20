@@ -267,9 +267,13 @@ const arrayOfNames = (obj) => {
 // { teamName : ['Mos', 'Dan']};
 const objTeamDriver = (obj) => {
   const results = {};
-  results[key] = [];
   for (let key in obj) {
     const team = drivers[key].team;
     const driverName = drivers[key].name;
+    if (!results[team]) {
+      results[team] = [];
+    }
+    results[team].push(driverName);
   }
+  return results;
 };
